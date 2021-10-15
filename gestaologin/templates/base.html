@@ -1,0 +1,140 @@
+<!--MATERIAL DE APOIO:
+video: https://www.youtube.com/watch?v=tWpXoi17oXk&t=250s
+texto: https://codepen.io/truongtx-ccvn/pen/qLXGKV
+-->
+<!DOCTYPE html>
+{% load static %}
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Intranet | ISO9001</title>
+
+        <!--ENDEREÇO 1:https://getbootstrap.com/docs/4.3/getting-started/introduction/-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+        <!--ENDEREÇO 1 e 2: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+
+        <!--BOTÕES EDIT, DELETE...-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        <link href="{% static 'css/style.css'%}" rel="stylesheet">
+    </head>
+    <body>
+        <div class="wrapper">
+            <!-- Sidebar  -->
+            <nav id="sidebar">
+                <div class="sidebar-header">
+                    <a href="/"><img src="{%static 'img/logosmt.png'%}"></a>
+                </div>
+            </nav>
+
+
+                <ul class="list-unstyled components">
+                    <li class="active">
+                        <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Documentos Interno</a>
+                        <ul class="collapse list-unstyled" id="homeSubmenu">
+                            <li><a href="#" target="_blank">Lista Mestra - Documentos</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Documentos Externo</a>
+                        <ul class="collapse list-unstyled" id="pageSubmenu">
+                            <li><a href="#" target="_blank">Lista Mestra Doctos Externo</a></li>
+                            <li><a href="#" target="_blank">NBR ISO 9001:2015</a></li>
+                            <!--<li><a href="#" target="_blank">Certificado ISO 9001</a></li>
+                            <li><a href="#" target="_blank">Certificado Fornecedores</a></li>
+                            <li><a href="#" target="_blank">Certificado Calibração</a></li>
+                            <li><a href="#" target="_blank">Desenhos</a></li>-->
+                        </ul>
+                    </li>
+                    <!--
+                    <li>
+                        <a href="#pageSubmenu4" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Plano de Ação</a>
+                        <ul class="collapse list-unstyled" id="pageSubmenu4">
+                            <li><a href="#" target="_blank">Mudança e Melhoria</a></li>
+                            <li><a href="#" target="_blank">Não conformidade e ação corretiva></a></li>
+                            <li><a href="#" target="_blank">Riscos e oportunidades></a></li>
+                            <li><a href="#" target="_blank">Comunicação></a></li>
+                            <li><a href="#" target="_blank">Auditoria></a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#pageSubmenu1" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Aquisição</a>
+                        <ul class="collapse list-unstyled" id="pageSubmenu1">
+                            <li><a href="#" target="_blank">Fornecedor,seleção, avaliação e monitoramento</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" target="_blank">Comercial</a></li>
+                    <li>
+                        <a href="#pageSubmenu2" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">SGQ</a>
+                        <ul class="collapse list-unstyled" id="pageSubmenu2">
+                            <li><a href="#" target="_blank">Objetivos da qualidade</a></li>
+                            <li><a href="#" target="_blank">Satisfação do cliente</a></li>
+                            <li><a href="#" target="_blank">Análise crítica da direção</a></li>
+                            <li><a href="#" target="_blank">Auditoria target="_blank"></a></li>
+                        </ul>
+                    </li>
+                    -->
+                    <li>
+                        <a href="#pageSubmenu3" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Gestão de Pessoas</a>
+                        <ul class="collapse list-unstyled" id="pageSubmenu3">
+                            <li><a href="#" target="_blank">Descrição de cargo</a></li>
+                            <!--<li><a href="#" target="_blank">Plano de treinamento</a></li>-->
+                            <li><a href="#" target="_blank">Lista de funcionários</a></li>
+                            <!--<li><a href="#" target="_blank">Organograma</a></li>-->
+                            <li><a href="#" target="_blank">Papéis, responsabilidades e autoridades</a></li>
+                        </ul>
+                    </li>
+                    <!--
+                    <li><a href="#" target="_blank">G.Recursos,Eq.Medição</a></li>
+                    <li><a href="#" target="_blank">Liberação de Produto</a></li>
+                    <li><a href="#" target="_blank">Operação</a></li>
+                    -->
+                </ul>
+            </nav>
+
+            <!-- Page Content  -->
+            <div id="content">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <div class="container-fluid">
+                        <button type="button" id="sidebarCollapse" class="btn btn-info">
+                            <i class="fas fa-align-left"></i>
+                            <span>Menu</span>
+                        </button>
+                        <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                        </button>
+
+                        <!--MENU LOGIN-->
+
+                    </div>
+                </nav>
+                {% block conteudo %}
+                {% endblock conteudo %}
+            </div>
+        </div>
+
+    <!--RODAPÉ-->
+    <footer class="footer">Criado por RBGH</footer>
+
+    <!--ENDEREÇO:https://getbootstrap.com/docs/4.3/getting-started/introduction/-->
+    <!--
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+            $('#sidebar').toggleClass('active');
+            });
+        });
+    </script>
+
+    <!--JAVASCRIPT BOTÃO DELETE-->
+    </body>
+</html>

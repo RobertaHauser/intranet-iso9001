@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <title>Intranet | ISO9001</title>
-</head>
-<body>
-  <h3>Teste2</h3>
-</body>
-</html>
+{%extends 'base.html'%}
+{% load static %}
+{% block conteudo %}
+<h3>Bem-vindo,</h3>
+<p>Você pode conhecer o sistema sem realizar login de acesso, mas se desejar utilize um login abaixo
+  para testar todas as funcionalidades (senha: senh@123).</p>
+
+{% endblock %}
