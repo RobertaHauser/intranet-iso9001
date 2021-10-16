@@ -1,0 +1,12 @@
+{%extends 'base.html'%}
+{% load static %}
+{% block conteudo %}
+    <div class="content">
+        <div><h3>Cadastro form.html</h3></div>
+        <form action="" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{form.as_p}}
+            <button type="submit" class="btn-salvar">Salvar</button>
+        </form>
+    </div>
+{% endblock conteudo %}
