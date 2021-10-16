@@ -1,3 +1,4 @@
+from django.shortcuts import render, redirect
 from django.views.generic.list import ListView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .models import for_reh_001
@@ -23,3 +24,8 @@ class for_reh_001u(UpdateView):
     fields = "__all__"
     template_name = 'form.html'
     success_url = reverse_lazy('for_reh_001r')
+
+def for_reh_001d(request,pk):
+    db=for_reh_001.objects.get(pk=pk)
+    db.delete()
+    return redirect('for_reh_001r')

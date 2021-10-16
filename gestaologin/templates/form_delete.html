@@ -1,0 +1,13 @@
+{%extends 'base.html'%}
+{% load static %}
+{% block conteudo %}
+<div class="content">
+    <div><h3>Descrição de Cargos_Excluir</h3></div>
+    <form action="" method="POST">
+        <p>Deseja excluir o registro: <strong>{{object}}?</strong></p>
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit" class="btn-deletar">Excluir</button>
+    </form>
+</div>
+{% endblock conteudo %}
