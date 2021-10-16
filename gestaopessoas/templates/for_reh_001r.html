@@ -1,0 +1,43 @@
+{%extends 'base.html'%}
+{% load static %}
+{% block conteudo %}
+<div class="content">
+    <div>
+        <h3>Descrição de Cargos</h3>
+        <div style='text-align:right'>
+            <a href="#" class="btn-adicionar"><span class="material-icons">add_circle</span></a>
+        </div>
+        <p><i>Acesso para edição (usuário:grh - senha:senh@123)</i></p>
+    </div>
+    <table class="table table-sm">
+        <thead>
+            <tr>
+                <th scope="col">Função</th>
+                <th scope="col">Escolaridade</th>
+                <th scope="col">Necessário treinamento</th>
+                <th scope="col">Descrição do treinamento</th>
+                <th scope="col">Necessário experiência</th>
+                <th scope="col">Descrição da experiência</th>
+                <th scope="col">Editar</th>
+                <th scope="col">Excluir</th>
+            </tr>
+        </thead>
+        {%for ifor_reh_001 in object_list%}
+        <tbody>
+            <tr>
+                <th scope="row">{{ifor_reh_001.funcao}}</th>
+                <td>{{ifor_reh_001.escolaridade}}</td>
+                <td>{{ifor_reh_001.treinamentoopc}}</td>
+                <td>{{ifor_reh_001.treinamento}}</td>
+                <td>{{ifor_reh_001.experienciaopc}}</td>
+                <td>{{ifor_reh_001.experiencia}}</td>
+                <td><a href="#"><span class="material-icons">edit</span></a></td>
+                <td><a href="#"><span class="material-icons">delete</span></a></td>
+            </tr>
+        </tbody>
+        {%empty%}
+        <tr><td colspan="8">Nenhum registro</td></tr>
+        {%endfor%}
+    </table>
+</div>
+{% endblock conteudo %}
