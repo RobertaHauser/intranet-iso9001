@@ -138,4 +138,9 @@ MEDIA_ROOT=os.path.join(BASE_DIR,'media')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+#Configuração autenticação
+LOGIN_REDIRECT_URL='index'
+LOGOUT_REDIRECT_URL='index'
+LOGIN_URL='index'
+
 django_on_heroku.settings(locals())
