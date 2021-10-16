@@ -109,7 +109,22 @@ texto: https://codepen.io/truongtx-ccvn/pen/qLXGKV
                         </button>
 
                         <!--MENU LOGIN-->
-
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="nav navbar-nav ml-auto">
+                                <li class="nav-item active">
+                                    <form action="" method="POST">
+                                        {%if request.user.is_authenticated%}
+                                        <span id="username">Olá, {{request.user}}</span>
+                                        <a href="{% url 'logout'%}"><span class="material-icons">logout</span></a>
+                                        {%else%}
+                                        {% csrf_token %}
+                                        {{form}}
+                                        <button type="submit">Entrar</button>
+                                        {% endif%}
+                                    </form>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </nav>
                 {% block conteudo %}
