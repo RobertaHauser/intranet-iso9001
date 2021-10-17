@@ -3,11 +3,11 @@ from django.views.generic.list import ListView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .models import for_reh_001
 from django.urls import reverse_lazy
-#from braces.views import GroupRequiredMixin
+from braces.views import GroupRequiredMixin
 
 
 # Create your views here.
-class for_reh_001c(CreateView):
+class for_reh_001c(GroupRequiredMixin,CreateView):
     group_required = u"rh1"#somente usuarios do grupo, podem executar [u"rh1",u"sgq1",...]
     model = for_reh_001
     fields = "__all__"
@@ -20,7 +20,7 @@ class for_reh_001r(ListView):
 
 
 class for_reh_001u(UpdateView):
-    group_required = u"rh1"
+    #group_required = u"rh1"
     model = for_reh_001
     fields = "__all__"
     template_name = 'form.html'
