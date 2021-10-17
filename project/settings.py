@@ -42,8 +42,9 @@ INSTALLED_APPS = [
 ]
 
 INSTALLED_APPS += [
-    'gestaologin',
+    #'gestaologin',
     'gestaopessoas',
+    'gestaologin.apps.GestaologinConfig',
 ]
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
