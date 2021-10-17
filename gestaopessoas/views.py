@@ -19,8 +19,8 @@ class for_reh_001r(ListView):
     template_name = 'for_reh_001r.html'
 
 
-class for_reh_001u(UpdateView):
-    #group_required = u"rh1"
+class for_reh_001u(GroupRequiredMixin, UpdateView):
+    group_required = u"rh1"
     model = for_reh_001
     fields = "__all__"
     template_name = 'form.html'
