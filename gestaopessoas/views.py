@@ -26,8 +26,8 @@ class for_reh_001u(GroupRequiredMixin,UpdateView):
     template_name = 'form.html'
     success_url = reverse_lazy('for_reh_001r')
 
-def for_reh_001d(GroupRequiredMixin,request,pk):
-    group_required = u"rh1"
+def for_reh_001d(request,pk):
+    #group_required = u"rh1"
     db=for_reh_001.objects.get(pk=pk)
     db.delete()
     return redirect('for_reh_001r')
