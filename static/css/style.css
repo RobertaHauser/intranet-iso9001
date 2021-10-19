@@ -146,6 +146,29 @@ footer{
 }
 
 /* ---------------------------------------------------
+    Cards
+----------------------------------------------------- */
+.container{
+    width: 100%;
+    height: auto;
+
+    /*add flexbox*/
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+.box{
+    width: 20%;
+    height: 300px;
+    background: white;
+    margin:20px;
+    box-sizing: border-box;
+    font-size: 10px;
+
+}
+
+/* ---------------------------------------------------
     MEDIAQUERIES
 ----------------------------------------------------- */
 

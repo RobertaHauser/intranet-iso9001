@@ -26,8 +26,18 @@ class for_reh_001u(GroupRequiredMixin, UpdateView):
     template_name = 'form.html'
     success_url = reverse_lazy('for_reh_001r')
 
+
 def for_reh_001d(request,pk):
-    #group_required = u"rh1"
-    db=for_reh_001.objects.get(pk=pk)
-    db.delete()
-    return redirect('for_reh_001r')
+    print(request.user.groups.all())
+    grupo=list(request.user.groups.all().values_list("name", flat=True))
+    print(grupo)
+    if "rh1" in grupo:
+        db = for_reh_001.objects.get(pk=pk)
+        db.delete()
+        return redirect('for_reh_001r')
+    else:
+        return redirect('index')
+
+#se necessário mais de um grupo com permissão, criar lista:
+#permissao=list("rh1","rh2")
+#if "permissao" in grupo
