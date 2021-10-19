@@ -1,0 +1,27 @@
+{%extends 'base.html'%}
+{% load static %}
+{% block conteudo %}
+<div class="content">
+    <div>
+        <h3>Requisitos Normativos - NBR ISO9001:2015</h3>
+    </div>
+    <table class="table table-sm">
+        <thead>
+            <tr>
+                <th scope="col">Título</th>
+                <th scope="col">Descrição</th>
+            </tr>
+        </thead>
+        {%for itab_sgq_001 in object_list%}
+        <tbody>
+            <tr>
+                <th scope="row">{{itab_sgq_001.requisito_num_original}}</th>
+                <td>{{itab_sgq_001.requisito_txt_original}}</td>
+            </tr>
+        </tbody>
+        {%empty%}
+        <tr><td colspan="8">Nenhum registro</td></tr>
+        {%endfor%}
+    </table>
+</div>
+{% endblock conteudo %}

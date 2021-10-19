@@ -44,6 +44,7 @@ INSTALLED_APPS = [
 INSTALLED_APPS += [
     #'gestaologin',
     'gestaopessoas',
+    'gestaoprocessos',
     'gestaologin.apps.GestaologinConfig',
 ]
 MIDDLEWARE = [

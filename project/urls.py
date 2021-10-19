@@ -22,4 +22,5 @@ urlpatterns = [
     #Importa urls para os apps
     path('', include('gestaologin.urls')),
     path('', include('gestaopessoas.urls')),
+    path('', include('gestaoprocessos.urls')),
 ]
