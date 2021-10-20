@@ -7,21 +7,80 @@ https://www.youtube.com/watch?v=_-3nHZHkn4M
 {%extends 'base.html'%}
 {% load static %}
 {% block conteudo %}
-<!--
+
 <div class="container">
     <div class="box">
-        <b>Documentos Interno</b>
+        <div style='text-align:center'><b>Documentos Interno (0%)</b></div>
         <ul>
-            <li>teste</li>
+            <li>Lista documentos interno</li>
         </ul>
     </div>
-    <div class="box">2</div>
-    <div class="box">3</div>
+    <div class="box">
+        <div style='text-align:center'><b>Documentos Externo (0%)</b></div>
+        <ul>
+            <li>Lista documentos externo</li>
+            <li><a href="{% url 'for_reh_001r'%}" target="_blank"><b>NBR ISO 9001:2015</b></a></li>
+            <li>Certificado ISO 9001</li>
+            <li>Certificado Fornecedores</li>
+            <li>Desenhos</li>
+        </ul>
+    </div>
+    <div class="box">
+        <div style='text-align:center'><b>Plano de Ação (0%)</b></div>
+        <ul>
+            <li><a href="#" target="_blank">Mudança e Melhoria</a></li>
+            <li><a href="#" target="_blank">Não conformidade e ação corretiva</a></li>
+            <li><a href="#" target="_blank">Riscos e oportunidades</a></li>
+            <li><a href="#" target="_blank">Comunicação</a></li>
+            <li><a href="#" target="_blank">Auditoria</a></li>
+        </ul>
+    </div>
 </div>
 <div class="container">
-    <div class="box">1</div>
-    <div class="box">2</div>
-    <div class="box">3</div>
+    <div class="box">
+        <div style='text-align:center'><b>Aquisição (0%)</b></div>
+        <ul>
+            <li><a href="#" target="_blank">Fornecedor,seleção, avaliação e monitoramento</a></li>
+        </ul>
+    </div>
+    <div class="box">
+        <div style='text-align:center'><b>Comercial (0%)</b></div>
+        <ul>
+        <li><a href="#" target="_blank">(Em desenvolvimento)</a></li>
+        </ul>
+    </div>
+    <div class="box">
+        <div style='text-align:center'><b>SGQ (0%)</b></div>
+        <ul>
+            <li><a href="#" target="_blank">Objetivos da qualidade</a></li>
+            <li><a href="#" target="_blank">Satisfação do cliente</a></li>
+            <li><a href="#" target="_blank">Análise crítica da direção</a></li>
+            <li><a href="#" target="_blank">Auditoria</a></li>
+        </ul>
+    </div>
 </div>
--->
+<div class="container">
+    <div class="box">
+        <div style='text-align:center'><b>Pessoas (20%)</b></div>
+        <ul>
+            <li><a href="{% url 'for_reh_001r'%}" target="_blank"><b>Descrição de cargo</b></a></li>
+            <li><a href="#" target="_blank">Plano de treinamento</a></li>
+            <li><a href="#" target="_blank">Lista de funcionários</a></li>
+            <li><a href="#" target="_blank">Organograma</a></li>
+            <li><a href="#" target="_blank">Papéis, responsabilidades e autoridades</a></li>
+        </ul>
+    </div>
+    <div class="box">
+        <div style='text-align:center'><b>Equipamentos (0%)</b></div>
+        <ul>
+        <li><a href="#" target="_blank">(Em desenvolvimento)</a></li>
+        </ul>
+    </div>
+    <div class="box">
+        <div style='text-align:center'><b>Operação (0%)</b></div>
+        <ul>
+            <li><a href="#" target="_blank">(Em desenvolvimento)</a></li>
+        </ul>
+    </div>
+</div>
 {% endblock %}
